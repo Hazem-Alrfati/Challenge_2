@@ -1,0 +1,52 @@
+:root {
+  --main-color:#424242;
+  --main-border: 15px;
+  --main-raduis: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 800px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.container div {
+  width: 50%;
+}
+
+.container::before {
+  content: url(../imgs/megaman.png);
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+  -webkit-transform: translate(-50% , -50%);
+  -moz-transform: translate(-50% , -50%);
+  -ms-transform: translate(-50% , -50%);
+  -o-transform: translate(-50% , -50%);
+}
+
+.one {
+  height: 528px;
+  border-top: var(--main-border) solid var(--main-color) ;
+  border-bottom: var(--main-border) solid var(--main-color) ;
+  border-left: var(--main-border) solid var(--main-color) ;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: -14px;
+  border-top-left-radius: var(--main-raduis);
+  border-bottom-left-radius: var(--main-raduis);
+}
+
+.two {
+  background-color: var(--main-color);
+  height: 500px;
+}
